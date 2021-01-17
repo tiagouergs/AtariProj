@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module m41 ( 
-    input a, 
-    input b, 
-    input c, 
-    input d, 
+module mux4To1 ( 
+    input i1, 
+    input i2, 
+    input i3, 
+    input i4, 
     input s0, s1,
     output out); 
 
- assign out = s1 ? (s0 ? d : c) : (s0 ? b : a); 
+ assign out = s1 ? (s0 ? i4 : i3) : (s0 ? i2 : i1); 
 
 endmodule
